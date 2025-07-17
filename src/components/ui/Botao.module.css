@@ -1,0 +1,37 @@
+.botao {
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  font-weight: 500;
+  border-radius: 6px;
+  padding: 12px 24px;
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.primary {
+  background-color: #af9469;
+  color: white;
+  box-shadow: 0 2px 6px rgba(175, 148, 105, 0.25);
+}
+
+.primary:hover {
+  background-color: #9a8159;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(175, 148, 105, 0.35);
+}
+
+.secondary {
+  background-color: transparent;
+  color: #af9469;
+  border: 2px solid #af9469;
+}
+
+.secondary:hover {
+  background-color: #af9469;
+  color: white;
+}

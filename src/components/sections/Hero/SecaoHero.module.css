@@ -1,0 +1,134 @@
+.hero {
+  background: linear-gradient(135deg, #eaeaea 0%, #d5d5d5 100%);
+  padding: 80px 0 0 0;
+  min-height: 650px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.conteudo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  min-height: 570px;
+  position: relative;
+}
+
+.textoContainer {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding-right: 20px;
+}
+
+
+.titulo {
+  font-size: 40px;
+  font-weight: 700;
+  color: #002855;
+  line-height: 1.15;
+  margin-bottom: 32px;
+}
+
+.destaque {
+  color: #002855;
+}
+
+.descricao {
+  font-size: 16px;
+  color: #666666;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.botaoHero {
+  margin-top: 15px;
+  margin-bottom: 60px;
+  padding: 18px 36px;
+  font-size: 16px;
+  font-weight: 500;
+  align-self: flex-start;
+}
+
+.localizacao {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #002855;
+  font-weight: 500;
+}
+
+.iconePin {
+  width: 16px;
+  height: 16px;
+  filter: brightness(0) saturate(100%) invert(11%) sepia(84%) saturate(4824%) hue-rotate(214deg) brightness(99%) contrast(105%);
+}
+
+.imagemContainer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+  height: 100%;
+  min-height: 520px;
+}
+
+.imagemAdvogado {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.2));
+  margin-bottom: 0;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 0 0 0;
+    min-height: 500px;
+  }
+  
+  .conteudo {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+    min-height: 400px;
+  }
+  
+  .textoContainer {
+    padding-right: 0;
+    max-width: 100%;
+  }
+  
+  .imagemContainer {
+    min-height: 300px;
+    order: -1;
+  }
+  
+  .titulo {
+    font-size: 28px;
+  }
+  
+  .descricao {
+    font-size: 16px;
+    margin-bottom: 32px;
+  }
+  
+  .imagemAdvogado {
+    max-width: 280px;
+  }
+}

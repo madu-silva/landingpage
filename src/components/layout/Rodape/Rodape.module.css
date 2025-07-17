@@ -1,0 +1,104 @@
+.rodape {
+  background-color: #002855;
+  color: white;
+  padding: 60px 0 20px 0;
+  margin-top: 80px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.conteudo {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 60px;
+  margin-bottom: 40px;
+}
+
+.logoSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoRodape {
+  height: 80px;
+  width: auto;
+  max-width: 250px;
+  filter: brightness(0) invert(1);
+}
+
+.tituloSecao {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #af9469;
+}
+
+.infoSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: #e0e0e0;
+}
+
+.icone {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1);
+}
+
+.linkSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.link {
+  color: #e0e0e0;
+  text-decoration: none;
+  margin-bottom: 12px;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: #af9469;
+}
+
+.copyright {
+  text-align: center;
+  padding-top: 30px;
+  border-top: 1px solid #1a3a62;
+}
+
+.copyright p {
+  font-size: 14px;
+  color: #cccccc;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .conteudo {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+  
+  .logoSection {
+    justify-content: center;
+  }
+  
+  .infoItem {
+    justify-content: center;
+  }
+}
