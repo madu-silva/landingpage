@@ -34,7 +34,7 @@ export default function SecaoFaq() {
     return (
       <section className={styles.secaoFaq}>
         <div className={styles.container}>
-          <TituloSecao 
+          <TituloSecao
             titulo="Tire suas dúvidas"
             subtitulo="Respostas claras para as questões mais comuns"
           />
@@ -51,7 +51,7 @@ export default function SecaoFaq() {
     return (
       <section className={styles.secaoFaq}>
         <div className={styles.container}>
-          <TituloSecao 
+          <TituloSecao
             titulo="Tire suas dúvidas"
             subtitulo="Respostas claras para as questões mais comuns"
           />
@@ -65,16 +65,17 @@ export default function SecaoFaq() {
 
   return (
     <section className={styles.secaoFaq}>
+
       <div className={styles.container}>
-        <TituloSecao 
+        <TituloSecao
           titulo="Tire suas dúvidas"
           subtitulo="Respostas claras para as questões mais comuns sobre nossos serviços jurídicos"
         />
-        
+
         <div className={styles.faqContainer}>
           {faqs?.map((faq, index) => (
             <div key={`faq-${index}-${faq.pergunta.slice(0, 10)}`} className={styles.faqItem}>
-              <button 
+              <button
                 className={`${styles.faqQuestion} ${activeIndex === index ? styles.active : ''}`}
                 onClick={() => toggleFaq(index)}
                 aria-expanded={activeIndex === index}
@@ -84,8 +85,8 @@ export default function SecaoFaq() {
                   +
                 </span>
               </button>
-              
-              <div 
+
+              <div
                 className={`${styles.faqAnswer} ${activeIndex === index ? styles.answerOpen : ''}`}
               >
                 <div className={styles.answerContent}>

@@ -83,6 +83,7 @@ export default function SecaoServicos() {
         <TituloSecao 
           titulo="Como posso ajudar você?"
           subtitulo="Atuação estratégica e humanizada em diversas áreas do Direito."
+          
         />
         
         <CarrosselServicos servicos={servicos} />
