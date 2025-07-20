@@ -11,7 +11,7 @@ export default function SecaoServicos() {
         "Problemas com planos de saúde (negativa de cobertura, reajuste abusivo, rescisão contratual);",
         "Cobranças indevidas, nome negativado indevidamente e produtos com defeito."
       ],
-      icone: "/images/icons/direito do comsumidor.svg",
+      icone: "/images/icons/direito do consumidor.svg",
       destaque: false
     },
     {
@@ -41,7 +41,7 @@ export default function SecaoServicos() {
         "Revisão de aposentadoria e reconhecimento de tempo de contribuição;",
         "Ações contra indeferimento de benefício."
       ],
-      icone: "/images/icons/direito-de-familia.svg",
+      icone: "/images/icons/icone-das-maos.svg",
       destaque: true
     },
     {
@@ -51,7 +51,7 @@ export default function SecaoServicos() {
         "Assessoria para formalização e revisão de contratos;",
         "Danos morais e materiais decorrentes de falha na prestação de serviço."
       ],
-      icone: "/images/icons/direito civil e contratual.svg",
+      icone: "/images/icons/direito do consumidor.svg",
       destaque: false
     },
     {
@@ -61,7 +61,7 @@ export default function SecaoServicos() {
         "Negativa de tratamento por parte de plano de saúde;",
         "Indenizações por danos causados por condutas médicas inadequadas."
       ],
-      icone: "/images/icons/direito-de-familia.svg",
+      icone: "/images/icons/direito civil e contratual.svg",
       destaque: true
     },
     {
@@ -72,7 +72,7 @@ export default function SecaoServicos() {
         "Empréstimos consignados não autorizados, especialmente contra idosos ou aposentados;",
         "Negativação indevida do nome.",
       ],
-      icone: "/images/icons/direito civil e contratual.svg",
+      icone: "/images/icons/icone-das-maos.svg",
       destaque: false
     }
   ];
