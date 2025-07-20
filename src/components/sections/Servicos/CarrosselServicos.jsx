@@ -32,12 +32,20 @@ export default function CarrosselServicos({ servicos }) {
                   <img src={servico.icone} alt={servico.titulo} className={styles.icone} />
                 </div>
                 <h3 className={styles.tituloServico}>{servico.titulo}</h3>
-                <p className={styles.descricaoServico}>{servico.descricao}</p>
+                <p className={styles.descricaoServico}>{Array.isArray(servico.descricao) ? (
+                  <ul>
+                    {servico.descricao.map((item, index) => (
+                      <li key={index}>{item}</li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p>{servico.descricao}</p>
+                )}</p>
               </div>
             </div>
           ))}
         </div>
-      </div>
+      </div>      
       
       <button className={styles.botaoProximo} onClick={nextSlide}>
         ›
