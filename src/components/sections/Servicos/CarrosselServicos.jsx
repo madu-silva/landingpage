@@ -4,12 +4,15 @@ import styles from './CarrosselServicos.module.css';
 export default function CarrosselServicos({ servicos }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  const cardsVisiveis = 3;
+  const maxIndex = servicos.length - cardsVisiveis;
+
   const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1) % servicos.length);
+    setCurrentIndex((prev) => (prev < maxIndex ? prev + 1 : 0));
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prev) => (prev - 1 + servicos.length) % servicos.length);
+    setCurrentIndex((prev) => (prev > 0 ? prev - 1 : maxIndex));
   };
 
   return (
@@ -17,12 +20,12 @@ export default function CarrosselServicos({ servicos }) {
       <button className={styles.botaoAnterior} onClick={prevSlide}>
         ‹
       </button>
-      
+
       <div className={styles.carrosselWrapper}>
-        <div 
+        <div
           className={styles.carrosselTrack}
-          style={{ 
-            transform: `translateX(-${currentIndex * 33.333}%)` 
+          style={{
+            transform: `translateX(-${currentIndex * 100 / 3}%)`
           }}
         >
           {servicos.map((servico, index) => (
@@ -45,21 +48,11 @@ export default function CarrosselServicos({ servicos }) {
             </div>
           ))}
         </div>
-      </div>      
-      
+      </div>
+
       <button className={styles.botaoProximo} onClick={nextSlide}>
         ›
-      </button>
-      
-      <div className={styles.indicadores}>
-        {servicos.map((_, index) => (
-          <button
-            key={index}
-            className={`${styles.indicador} ${index === currentIndex ? styles.ativo : ''}`}
-            onClick={() => setCurrentIndex(index)}
-          />
-        ))}
-      </div>
+      </button>   
     </div>
   );
 }

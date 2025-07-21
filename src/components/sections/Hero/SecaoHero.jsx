@@ -20,9 +20,10 @@ export default function SecaoHero() {
               personalizado, direto e sem intermediários.<br />
               Mais do que processos, eu lido com histórias.
             </p>
-            <Botao variant="primary" className={styles.botaoHero}>
+            <Botao href="https://wa.me/5538999719257" className={styles.botaoHero}>
               Fale diretamente comigo!
             </Botao>
+
             <div className={styles.localizacao}>
               <img src="/images/icons/icone-map.svg" alt="Localização" className={styles.iconePin} />
               <span>Uberlândia e região | Atend. online para todo o Brasil</span>

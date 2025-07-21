@@ -1,6 +1,6 @@
 .secaoServicos {
   padding: 80px 0;
-  background-color: #ffffff;
+  background-color: #eaeaea;
 }
 
 .container {
@@ -14,10 +14,11 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
   margin-bottom: 40px;
+  border: 10px solid black;
 }
 
 .servicoCard {
-  background: #ffffff;
+  background: #eaeaea;
   padding: 40px 30px;
   border-radius: 20px;
   text-align: center;
@@ -37,11 +38,11 @@
 .destaque {
   background: linear-gradient(135deg, #af9469 0%, #9a8159 100%);
   color: white;
-  transform: scale(1.05);
+  transform: none;
 }
 
 .destaque:hover {
-  transform: scale(1.05) translateY(-8px);
+  transform: translateY(-8px);
 }
 
 .iconeContainer {
@@ -114,7 +115,7 @@
 }
 
 .botaoNav:hover {
-  background: #9a8159;
+  background: #af9469;
   transform: scale(1.1);
 }
 
@@ -123,30 +124,30 @@
     grid-template-columns: 1fr;
     gap: 30px;
   }
-  
+
   .servicoCard {
     padding: 30px 20px;
     min-height: auto;
   }
-  
+
   .destaque {
     transform: none;
   }
-  
+
   .destaque:hover {
     transform: translateY(-8px);
   }
-  
+
   .iconeContainer {
     width: 80px;
     height: 80px;
   }
-  
+
   .icone {
     width: 50px;
     height: 50px;
   }
-  
+
   .tituloServico {
     font-size: 20px;
   }

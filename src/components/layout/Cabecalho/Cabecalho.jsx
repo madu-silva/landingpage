@@ -7,13 +7,13 @@ export default function Cabecalho() {
     <header className={styles.header}>
       <div className={styles.container}>
         <div className={styles.logoContainer}>
-          <img 
-            src="/images/logos/LOGO_OFICIAL.svg" 
-            alt="Nicolas Ribeiro Neves - Logo" 
+          <img
+            src="/images/logos/LOGO_OFICIAL.svg"
+            alt="Nicolas Ribeiro Neves - Logo"
             className={styles.logoImagem}
           />
         </div>
-        
+
         <nav className={styles.nav}>
           <a href="#inicio" className={styles.navLink}>Início</a>
           <a href="#sobre" className={styles.navLink}>Sobre mim</a>
@@ -21,8 +21,11 @@ export default function Cabecalho() {
           <a href="#depoimentos" className={styles.navLink}>Depoimentos</a>
           <a href="#faq" className={styles.navLink}>FAQ</a>
         </nav>
+
+        <Botao href="https://wa.me/5538999719257">
+          Fale comigo!
+        </Botao>
         
-        <Botao variant="primary">Fale comigo!</Botao>
       </div>
     </header>
   );
