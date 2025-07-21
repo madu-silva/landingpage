@@ -24,7 +24,7 @@
 
 .imagemSobre {
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
   height: auto;
   border-radius: 20px;
   object-fit: cover;
@@ -251,6 +251,9 @@
 .botaoSobre {
   padding: 16px 32px;
   font-size: 16px;
+  display: block;
+  margin: 30px auto 0 auto;
+  text-align: center;
 }
 
 @media (max-width: 768px) {
@@ -261,7 +264,7 @@
   }
   
   .imagemSobre {
-    max-width: 300px;
+    max-width: 350px;
   }
   
   .texto p {
