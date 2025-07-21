@@ -41,10 +41,211 @@
 
 .texto p {
   font-size: 16px;
-  color: #444444;
+  color: #002855;
   line-height: 1.7;
   margin-bottom: 20px;
   text-align: justify;
+}
+
+/* Seção de introdução - otimizada para varredura */
+.introducao {
+  margin-bottom: 30px;
+  padding: 25px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  border-radius: 15px;
+  border-left: 4px solid #af9469;
+  text-align: center;
+}
+
+.nomeAdvogado {
+  font-size: 24px;
+  font-weight: 700;
+  color: #002855;
+  margin-bottom: 8px;
+  margin-top: 0;
+}
+
+.oab {
+  font-size: 14px;
+  color: #af9469;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.missao {
+  font-size: 16px;
+  color: #002855;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.destaqueMissao {
+  color: #af9469;
+  font-weight: 600;
+}
+
+/* Container dos detalhes expansíveis */
+.detalhesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Estilo dos elementos de acordeão */
+.detalheItem {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background: #ffffff;
+}
+
+.detalheItem:hover {
+  border-color: #af9469;
+  box-shadow: 0 4px 15px rgba(175, 148, 105, 0.1);
+}
+
+.detalheItem.aberto {
+  border-color: #af9469;
+  box-shadow: 0 6px 20px rgba(175, 148, 105, 0.15);
+}
+
+/* Estilo do cabeçalho clicável - otimizado para varredura */
+.resumo {
+  width: 100%;
+  padding: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  transition: background 0.3s ease;
+  color: #002855;
+  position: relative;
+  user-select: none;
+  border: none;
+  text-align: left;
+  font-family: inherit;
+}
+
+.resumo:hover,
+.resumo:focus {
+  background: linear-gradient(135deg, #af9469 0%, #9a8159 100%);
+  color: white;
+  outline: none;
+}
+
+.resumo:focus {
+  box-shadow: 0 0 0 2px rgba(175, 148, 105, 0.3);
+}
+
+.detalheItem.aberto .resumo {
+  background: linear-gradient(135deg, #af9469 0%, #9a8159 100%);
+  color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Ícones dos resumos */
+.icone {
+  font-size: 24px;
+  min-width: 30px;
+  text-align: center;
+}
+
+/* Área de texto do resumo */
+.textoResumo {
+  flex: 1;
+}
+
+.tituloResumo {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+
+.descricaoResumo {
+  font-size: 13px;
+  opacity: 0.8;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Seta indicativa */
+.seta {
+  font-size: 12px;
+  transition: transform 0.3s ease;
+  margin-left: 10px;
+}
+
+.detalheItem.aberto .seta {
+  transform: rotate(180deg);
+}
+
+/* Conteúdo expansível */
+.conteudoExpansivel {
+  background: #ffffff;
+  animation: expandir 0.3s ease-out;
+}
+
+.conteudoDetalhes {
+  padding: 25px;
+}
+
+@keyframes expandir {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.conteudoDetalhes p {
+  margin-bottom: 15px;
+  color: #002855;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+/* Lista de áreas */
+.listaAreas {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+}
+
+.listaAreas li {
+  padding: 8px 0;
+  padding-left: 25px;
+  position: relative;
+  color: #002855;
+  font-weight: 500;
+}
+
+.listaAreas li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #af9469;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Destaque dentro do conteúdo */
+.destaque {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 3px solid #af9469;
+  font-style: italic;
+  margin-top: 15px;
+  margin-bottom: 0;
 }
 
 .botaoSobre {
@@ -66,5 +267,58 @@
   .texto p {
     font-size: 14px;
     text-align: left;
+  }
+
+  .introducao {
+    padding: 20px;
+    margin-bottom: 25px;
+  }
+
+  .nomeAdvogado {
+    font-size: 20px;
+  }
+
+  .oab {
+    font-size: 12px;
+  }
+
+  .missao {
+    font-size: 14px;
+  }
+
+  .resumo {
+    padding: 15px;
+    gap: 12px;
+  }
+
+  .icone {
+    font-size: 20px;
+    min-width: 24px;
+  }
+
+  .tituloResumo {
+    font-size: 14px;
+  }
+
+  .descricaoResumo {
+    font-size: 12px;
+  }
+
+  .conteudoDetalhes {
+    padding: 20px;
+  }
+
+  .conteudoDetalhes p {
+    font-size: 14px;
+  }
+
+  .listaAreas li {
+    font-size: 14px;
+    padding: 6px 0;
+  }
+
+  .destaque {
+    padding: 12px;
+    font-size: 13px;
   }
 }

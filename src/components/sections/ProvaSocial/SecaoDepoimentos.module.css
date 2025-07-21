@@ -9,11 +9,34 @@
   padding: 0 20px;
 }
 
-.depoimentos {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-  margin-bottom: 40px;
+/* Container do carrossel */
+.carrosselContainer {
+  position: relative;
+  width: 100%;
+  padding: 0 80px;
+  margin-bottom: 30px;
+}
+
+/* Wrapper do carrossel */
+.carrosselWrapper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  border-radius: 20px;
+}
+
+/* Track do carrossel */
+.carrosselTrack {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+/* Slide individual */
+.depoimentoSlide {
+  min-width: 33.333%;
+  padding: 0 15px;
+  box-sizing: border-box;
 }
 
 .depoimentoCard {
@@ -22,7 +45,7 @@
   border-radius: 20px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  min-height: 300px;
+  min-height: 320px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -35,26 +58,30 @@
 
 .estrelas {
   margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 4px;
 }
 
 .estrela {
   font-size: 18px;
   color: #fbbf24;
-  margin-right: 4px;
 }
 
 .texto {
   font-size: 14px;
-  color: #444444;
+  color: #002855;
   line-height: 1.6;
   margin-bottom: 24px;
   flex-grow: 1;
   font-style: italic;
+  text-align: center;
 }
 
 .autor {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   padding-top: 16px;
   border-top: 1px solid #e5e7eb;
@@ -62,7 +89,7 @@
 
 .iconeAutor {
   font-size: 16px;
-  color: #999999;
+  color: #af9469;
 }
 
 .nome {
@@ -71,45 +98,128 @@
   color: #002855;
 }
 
-.navegacao {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  margin-top: 40px;
-}
-
-.botaoNav {
+/* Botões de navegação do carrossel */
+.botaoAnterior,
+.botaoProximo {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   width: 50px;
   height: 50px;
-  border-radius: 50%;
-  background: #af9469;
-  color: white;
+  background: rgba(175, 148, 105, 0.9);
   border: none;
+  border-radius: 50%;
+  color: white;
   font-size: 24px;
   cursor: pointer;
   transition: all 0.3s ease;
+  z-index: 10;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
 }
 
-.botaoNav:hover {
-  background: #9a8159;
-  transform: scale(1.1);
+.botaoAnterior {
+  left: 0;
+}
+
+.botaoProximo {
+  right: 0;
+}
+
+.botaoAnterior:hover,
+.botaoProximo:hover {
+  background: rgba(175, 148, 105, 1);
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* Indicadores */
+.indicadores {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.indicador {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(175, 148, 105, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.indicador:hover {
+  background: rgba(175, 148, 105, 0.6);
+  transform: scale(1.2);
+}
+
+.indicador.ativo {
+  background: #af9469;
+  transform: scale(1.3);
+  box-shadow: 0 2px 8px rgba(175, 148, 105, 0.4);
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .carrosselContainer {
+    padding: 0 60px;
+  }
+
+  .depoimentoCard {
+    padding: 25px;
+    min-height: 300px;
+  }
+
+  .texto {
+    font-size: 13px;
+  }
 }
 
 @media (max-width: 768px) {
-  .depoimentos {
-    grid-template-columns: 1fr;
-    gap: 30px;
+  .carrosselContainer {
+    padding: 0 40px;
   }
-  
+
+  .depoimentoSlide {
+    flex: 0 0 100%; /* 1 card visível no mobile */
+  }
+
+  .carrosselTrack {
+    width: calc(100% * 6); /* Ajuste para mobile com 6 depoimentos */
+  }
+
   .depoimentoCard {
-    padding: 24px;
-    min-height: auto;
+    padding: 25px 20px;
+    min-height: 280px;
   }
-  
+
+  .botaoAnterior,
+  .botaoProximo {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
   .texto {
     font-size: 13px;
+    margin-bottom: 20px;
+  }
+
+  .estrela {
+    font-size: 16px;
+  }
+
+  .nome {
+    font-size: 13px;
+  }
+
+  .indicador {
+    width: 8px;
+    height: 8px;
   }
 }

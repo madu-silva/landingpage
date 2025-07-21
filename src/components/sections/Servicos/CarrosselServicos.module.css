@@ -134,9 +134,9 @@
 /* Descrição do serviço */
 .descricaoServico {
   font-size: 14px;
-  color: #666666;
+  color: #002855;
   line-height: 1.6;
-  text-align: left;
+  text-align: center;
 }
 
 .destaque .descricaoServico {
