@@ -65,7 +65,7 @@ export default function SecaoServicos() {
       destaque: true
     },
     {
-      titulo: "Direito Bancário/Contratual",
+      titulo: "Direito Bancário e Contratual",
       descricao: [
         "Cobrança de tarifas abusivas ou não informadas;",
         "Venda casada de produtos financeiros;",

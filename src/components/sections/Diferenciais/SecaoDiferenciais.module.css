@@ -16,10 +16,12 @@
 }
 
 .diferencialCard {
-  background: #eaeaea;
+  background: #ffffff; /* Fundo branco para o card */
   padding: 40px 30px;
   border-radius: 20px;
   text-align: center;
+  /* Sombra única para o estado normal do card */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Sombra mais suave */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   min-height: 280px;
   display: flex;
@@ -30,7 +32,8 @@
 
 .diferencialCard:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  /* Sombra para o hover, ligeiramente mais pronunciada */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
 }
 
 .iconeContainer {
@@ -49,6 +52,7 @@
   width: 60px;
   height: 60px;
   object-fit: contain;
+  filter: invert(100%) brightness(200%);
 }
 
 .titulo {

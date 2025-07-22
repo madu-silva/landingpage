@@ -21,12 +21,15 @@
   padding: 40px 30px;
   border-radius: 20px;
   text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  position: relative;
   min-height: 350px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative; /* Adicionado */
+  overflow: visible; /* Garante que nada seja cortado */
+  margin: 10px 0; /* Espaço para a animação */
 }
 
 .servicoCard:hover {
@@ -37,7 +40,7 @@
 .destaque {
   background: linear-gradient(135deg, #af9469 0%, #9a8159 100%);
   color: white;
-  transform: none;
+  z-index: 2; /* Garante que fique acima dos outros cards */
 }
 
 .destaque:hover {
