@@ -9,7 +9,7 @@ export default function SecaoFaq() {
   const [activeIndex, setActiveIndex] = useState(null);
 
   useEffect(() => {
-    fetch('https://wilton-filho.github.io/PFJS-GitHub/React/projeto/json/faqprova.json')
+    fetch('https://raw.githubusercontent.com/madu-silva/landingpage/refs/heads/main/faq.json')
       .then(response => {
         if (!response.ok) {
           throw new Error('Erro ao carregar perguntas frequentes');
@@ -64,7 +64,7 @@ export default function SecaoFaq() {
   }
 
   return (
-    <section className={styles.secaoFaq}>
+    <section id='faq' className={styles.secaoFaq}>
 
       <div className={styles.container}>
         <TituloSecao

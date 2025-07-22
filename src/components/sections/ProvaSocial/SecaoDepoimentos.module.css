@@ -164,6 +164,10 @@
   box-shadow: 0 2px 8px rgba(175, 148, 105, 0.4);
 }
 
+.secaoDepoimentos {
+  scroll-margin-top: 80px;
+}
+
 /* Responsividade */
 @media (max-width: 1024px) {
   .carrosselContainer {

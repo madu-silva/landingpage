@@ -54,7 +54,7 @@ export default function SecaoDepoimentos() {
   };
 
   return (
-    <section className={styles.secaoDepoimentos}>
+    <section id='depoimentos' className={styles.secaoDepoimentos}>
       <div className={styles.container}>
         <TituloSecao
           titulo="Clientes que confiaram e venceram"

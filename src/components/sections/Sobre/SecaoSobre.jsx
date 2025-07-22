@@ -74,7 +74,7 @@ export default function SecaoSobre() {
   ];
 
   return (
-    <section className={styles.secaoSobre}>
+    <section id='sobre' className={styles.secaoSobre}>
       <div className={styles.container}>
         <TituloSecao
           titulo="Conheça um pouco sobre mim"

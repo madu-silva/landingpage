@@ -118,6 +118,10 @@
   transform: scale(1.1);
 }
 
+.secaoServicos {
+  scroll-margin-top: 80px;
+}
+
 @media (max-width: 768px) {
   .servicos {
     grid-template-columns: 1fr;

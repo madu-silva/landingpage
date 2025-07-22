@@ -1,5 +1,9 @@
 .rodape {
-  background-color: #eaeaea;
+  /* background-color: #eaeaea; */
+  background-image: url("/images/hero/background.jpg");
+  background-position: center 70%;
+  background-size: cover;
+  background-repeat: no-repeat;
   padding: 32px 0 16px;
   font-size: 14px;
 }

@@ -78,7 +78,7 @@ export default function SecaoServicos() {
   ];
   
   return (
-    <section className={styles.secaoServicos}>
+    <section id='servicos' className={styles.secaoServicos}>
       <div className={styles.container}>
         <TituloSecao
           titulo="Como posso ajudar você?"
