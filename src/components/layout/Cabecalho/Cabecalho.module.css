@@ -61,29 +61,34 @@
   width: 100%;
 }
 
+.menuButton {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #002855;
+}
+
 @media (max-width: 768px) {
-  .container {
-    padding: 0 16px;
+  .menuButton {
+    display: block;
   }
-  
+
   .nav {
     display: none;
+    flex-direction: column;
+    gap: 16px;
+    background: white;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    padding: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    z-index: 999;
   }
-  
-  .nome {
-    font-size: 14px;
-  }
-  
-  .subtitulo {
-    font-size: 9px;
-  }
-  
-  .logoBox {
-    width: 50px;
-    height: 50px;
-  }
-  
-  .logoText {
-    font-size: 20px;
+
+  .navMobileAberto {
+    display: flex;
   }
 }

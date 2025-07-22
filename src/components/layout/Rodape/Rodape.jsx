@@ -29,7 +29,7 @@ export default function Rodape() {
             </div>
             <div className={styles.infoItem}>
               <img src="/images/icons/mail-outlined.svg" alt="Email" className={styles.icone} />
-              <span>contato@nicolasadvocacia.com</span>
+              <span>nicolasribeironeves.adv@gmail.com</span>
             </div>
           </div>
 

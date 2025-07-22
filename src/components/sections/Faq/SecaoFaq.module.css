@@ -182,6 +182,12 @@
   .loading p {
     font-size: 14px;
   }
+
+  .secaoFaq {
+  scroll-margin-top: 0px;
+  }
+
+  
 }
 
 @media (max-width: 480px) {
@@ -204,5 +210,9 @@
   
   .answerContent p {
     font-size: 14px;
+  }
+
+  .secaoFaq {
+  scroll-margin-top: 0px;
   }
 }

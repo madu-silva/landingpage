@@ -1,8 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Botao from '../../ui/Botao';
 import styles from './Cabecalho.module.css';
+import { FiMenu, FiX } from 'react-icons/fi';
 
 export default function Cabecalho() {
+  const [menuAberto, setMenuAberto] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuAberto(!menuAberto);
+  };
+
+  const fecharMenu = () => {
+    setMenuAberto(false);
+  };
+
   return (
     <header className={styles.header}>
       <div className={styles.container}>
@@ -14,18 +25,18 @@ export default function Cabecalho() {
           />
         </div>
 
-        <nav className={styles.nav}>
-          <a href="#inicio" className={styles.navLink}>Início</a>
-          <a href="#sobre" className={styles.navLink}>Sobre mim</a>
-          <a href="#servicos" className={styles.navLink}>Serviços</a>
-          <a href="#depoimentos" className={styles.navLink}>Depoimentos</a>
-          <a href="#faq" className={styles.navLink}>FAQ</a>
+        <nav className={`${styles.nav} ${menuAberto ? styles.navMobileAberto : ''}`}>
+          <a href="#inicio" className={styles.navLink} onClick={fecharMenu}>Início</a>
+          <a href="#sobre" className={styles.navLink} onClick={fecharMenu}>Sobre mim</a>
+          <a href="#servicos" className={styles.navLink} onClick={fecharMenu}>Serviços</a>
+          <a href="#depoimentos" className={styles.navLink} onClick={fecharMenu}>Depoimentos</a>
+          <a href="#faq" className={styles.navLink} onClick={fecharMenu}>FAQ</a>
+          <Botao href="https://wa.me/5538999719257">Fale comigo!</Botao>
         </nav>
 
-        <Botao href="https://wa.me/5538999719257">
-          Fale comigo!
-        </Botao>
-        
+        <button className={styles.menuButton} onClick={toggleMenu}>
+          {menuAberto ? <FiX size={28} /> : <FiMenu size={28} />}
+        </button>
       </div>
     </header>
   );
