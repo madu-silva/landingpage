@@ -320,4 +320,8 @@ font-size: 13px;
 width: 80%; /* Opcional: para o botão não ficar muito largo centralizado /
 max-width: 300px; / Opcional: define uma largura máxima para o botão */
 }
+
+.secaoSobre {
+  scroll-margin-top: 0px;
+  }
 }

@@ -80,8 +80,16 @@
 /* TABLET E MOBILE */
 @media (max-width: 1024px) {
   .header {
-    position: static; /* <<< AQUI ESTÁ A MUDANÇA PRINCIPAL */
+    position: fixed; /* Mudamos de static para fixed */
+    top: 0;
+    width: 100%;
     padding: 10px 0;
+    transform: translateY(0);
+    transition: transform 0.3s ease, padding 0.3s ease;
+  }
+
+  .header.hidden {
+    transform: translateY(-100%);
   }
   
   .logoImagem {

@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Botao from '../../ui/Botao';
 import styles from './Cabecalho.module.css';
 import { FiMenu, FiX } from 'react-icons/fi';
 
 export default function Cabecalho() {
   const [menuAberto, setMenuAberto] = useState(false);
+  const [headerVisible, setHeaderVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   const toggleMenu = () => {
     setMenuAberto(!menuAberto);
@@ -14,8 +16,27 @@ export default function Cabecalho() {
     setMenuAberto(false);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      
+      if (currentScrollY > lastScrollY && currentScrollY > 50) {
+        // Rolando para baixo
+        setHeaderVisible(false);
+      } else if (currentScrollY < lastScrollY) {
+        // Rolando para cima
+        setHeaderVisible(true);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollY]);
+
   return (
-    <header className={styles.header}>
+    <header className={`${styles.header} ${!headerVisible ? styles.hidden : ''}`}>
       <div className={styles.container}>
         <div className={styles.logoContainer}>
           <a href="#inicio">

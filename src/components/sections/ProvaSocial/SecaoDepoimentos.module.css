@@ -182,6 +182,10 @@
   .texto {
     font-size: 13px;
   }
+
+  .secaoDepoimentos {
+  scroll-margin-top: 0px;
+  }
 }
 
 /* APENAS MOBILE */
@@ -219,5 +223,9 @@
   .indicador {
     width: 8px;
     height: 8px;
+  }
+  
+  .secaoDepoimentos {
+  scroll-margin-top: 0px;
   }
 }
