@@ -60,7 +60,7 @@
 }
 
 .servicoCard {
-  background: #eaeaea;
+  background: #ffffff;
   padding: 40px 30px;
   border-radius: 20px;
   text-align: center;
@@ -71,6 +71,8 @@
   justify-content: flex-start; 
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.5s ease;
   height: 430px;
+   border: 1px solid rgba(0, 0, 0, 0.1);
+
 }
 
 .servicoCard:hover {

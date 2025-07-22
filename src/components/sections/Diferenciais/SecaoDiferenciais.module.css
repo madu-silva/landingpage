@@ -16,11 +16,12 @@
 }
 
 .diferencialCard {
-  background: #eaeaea;
+  background: #ffffff;
   border-radius: 20px;
   text-align: center;
   /* Sombra única para o estado normal do card */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   /* Sombra mais suave */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   min-height: 280px;
