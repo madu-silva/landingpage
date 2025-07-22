@@ -18,11 +18,13 @@ export default function Cabecalho() {
     <header className={styles.header}>
       <div className={styles.container}>
         <div className={styles.logoContainer}>
-          <img
-            src="/images/logos/LOGO_OFICIAL.svg"
-            alt="Nicolas Ribeiro Neves - Logo"
-            className={styles.logoImagem}
-          />
+          <a href="#inicio">
+            <img
+              src="/images/logos/LOGO_OFICIAL.svg"
+              alt="Nicolas Ribeiro Neves - Logo"
+              className={styles.logoImagem}
+            />
+          </a>
         </div>
 
         <nav className={`${styles.nav} ${menuAberto ? styles.navMobileAberto : ''}`}>
