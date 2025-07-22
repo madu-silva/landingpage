@@ -1,6 +1,7 @@
 .secaoDepoimentos {
   padding: 80px 0;
   background-color: #eaeaea;
+  scroll-margin-top: 80px;
 }
 
 .container {
@@ -9,30 +10,26 @@
   padding: 0 20px;
 }
 
-/* Container do carrossel */
 .carrosselContainer {
   position: relative;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px 60px; 
+  padding: 20px 60px;
   box-sizing: border-box;
 }
 
-/* Wrapper do carrossel */
 .carrosselWrapper {
   overflow: hidden;
   width: 100%;
   position: relative;
 }
 
-/* Track do carrossel */
 .carrosselTrack {
   display: flex;
   transition: transform 0.5s ease-in-out;
 }
 
-/* Slide individual */
 .depoimentoSlide {
   min-width: calc(100% / 3);
   padding: 30px 15px;
@@ -98,7 +95,6 @@
   color: #002855;
 }
 
-/* Botões de navegação do carrossel */
 .botaoAnterior,
 .botaoProximo {
   position: absolute;
@@ -135,7 +131,6 @@
   transform: translateY(-50%) scale(1.1);
 }
 
-/* Indicadores */
 .indicadores {
   display: flex;
   justify-content: center;
@@ -164,12 +159,14 @@
   box-shadow: 0 2px 8px rgba(175, 148, 105, 0.4);
 }
 
-.secaoDepoimentos {
-  scroll-margin-top: 80px;
-}
+/* --- RESPONSIVIDADE --- */
 
-/* Responsividade */
+/* TABLET E MOBILE */
 @media (max-width: 1024px) {
+  .depoimentoSlide {
+    min-width: 100%; /* Mostra apenas 1 card */
+  }
+
   .carrosselContainer {
     padding: 0 60px;
   }
@@ -184,17 +181,10 @@
   }
 }
 
+/* APENAS MOBILE */
 @media (max-width: 768px) {
   .carrosselContainer {
     padding: 0 40px;
-  }
-
-  .depoimentoSlide {
-    flex: 0 0 100%; /* 1 card visível no mobile */
-  }
-
-  .carrosselTrack {
-    width: calc(100% * 6); /* Ajuste para mobile com 6 depoimentos */
   }
 
   .depoimentoCard {
@@ -210,7 +200,7 @@
   }
 
   .texto {
-    font-size: 13px;
+    font-size: 14px; /* Aumentado para melhor leitura em 1 card */
     margin-bottom: 20px;
   }
 

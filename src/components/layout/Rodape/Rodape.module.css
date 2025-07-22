@@ -1,10 +1,9 @@
 .rodape {
-  /* background-color: #eaeaea; */
   background-image: url("/images/hero/background.jpg");
   background-position: center 70%;
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 32px 0 16px;
+  padding: 60px 0 20px;
   font-size: 14px;
 }
 
@@ -16,74 +15,50 @@
 
 .conteudo {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 1fr 1.5fr 1fr;
   gap: 40px;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
+  align-items: center;
 }
 
 .logoSection {
   display: flex;
-  align-items: center;
   justify-content: center;
-  gap: 16px;
 }
 
 .logoRodape {
-  height: 70px;
+  height: 80px;
   width: auto;
-  max-width: 220px;
+  max-width: 250px;
 }
 
 .infoSection {
   display: flex;
   flex-direction: column;
+  gap: 15px;
 }
 
 .infoItem {
   display: flex;
   align-items: center;
-  gap: 8px;
-  margin-bottom: 12px;
-  font-size: 14px;
+  gap: 12px;
+  font-size: 15px;
   color: #002855;
   font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.6);
 }
 
 .icone {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
 }
 
 .mapa {
-  width: 600px;
-  height: 200px;
-  overflow: hidden;
-  position: relative;
-}
-
-.mapa iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
-}
-
-.linkSection {
-  display: flex;
-  flex-direction: column;
-}
-
-.link {
-  color: #e0e0e0;
-  text-decoration: none;
-  margin-bottom: 10px;
-  font-size: 14px;
-  transition: color 0.3s ease;
-}
-
-.link:hover {
-  color: #af9469;
+  height: 220px;
+  overflow: hidden;
+  border-radius: 8px;
 }
 
 .copyright {
@@ -94,27 +69,58 @@
 
 .copyright p {
   font-size: 14px;
-  color: #cccccc;
+  color: #7a7575;
   margin: 0;
+  /* text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); */
 }
 
-@media (max-width: 768px) {
+/* --- RESPONSIVIDADE PARA TABLET --- */
+@media (max-width: 1024px) {
   .conteudo {
-    grid-template-columns: 1fr;
-    gap: 40px;
-    text-align: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
   }
 
   .logoSection {
-    justify-content: center;
+    grid-column: 1 / -1;
+    margin-bottom: 20px;
+  }
+}
+
+/* --- RESPONSIVIDADE PARA MOBILE --- */
+@media (max-width: 768px) {
+  .rodape {
+    padding: 40px 0 90px;
   }
 
-  .infoItem {
-    justify-content: center;
+  .conteudo {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    justify-items: center;
+  }
+
+  .logoSection {
+    grid-column: auto;
+    margin-bottom: 0;
   }
 
   .mapa {
-    height: 180px;
-    /* menor no mobile */
+    width: 100%;
+    max-width: 500px;
+    height: 35vh;
+    margin: 0 auto; /* Added this line to center the map */
+    display: block; /* Added this line to ensure proper centering */
+  }
+
+  .infoSection {
+    text-align: left;
+    width: auto;
+  }
+
+  .infoItem {
+    justify-content: flex-start;
+    max-width: none;
+    margin: 0;
   }
 }
+

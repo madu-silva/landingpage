@@ -1,6 +1,7 @@
 .secaoSobre {
   padding: 80px 0;
   background-color: #eaeaea;
+  scroll-margin-top: 80px;
 }
 
 .container {
@@ -10,7 +11,7 @@
 }
 
 .conteudo {
-  display: flex;
+  display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px;
   align-items: center;
@@ -47,7 +48,6 @@
   text-align: justify;
 }
 
-/* Seção de introdução - otimizada para varredura */
 .introducao {
   margin-bottom: 30px;
   padding: 25px;
@@ -87,14 +87,12 @@
   font-weight: 600;
 }
 
-/* Container dos detalhes expansíveis */
 .detalhesContainer {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
 
-/* Estilo dos elementos de acordeão */
 .detalheItem {
   border: 1px solid #e5e7eb;
   border-radius: 12px;
@@ -113,7 +111,6 @@
   box-shadow: 0 6px 20px rgba(175, 148, 105, 0.15);
 }
 
-/* Estilo do cabeçalho clicável - otimizado para varredura */
 .resumo {
   width: 100%;
   padding: 20px;
@@ -148,14 +145,12 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* Ícones dos resumos */
 .icone {
   font-size: 24px;
   min-width: 30px;
   text-align: center;
 }
 
-/* Área de texto do resumo */
 .textoResumo {
   flex: 1;
 }
@@ -175,7 +170,6 @@
   line-height: 1.4;
 }
 
-/* Seta indicativa */
 .seta {
   font-size: 12px;
   transition: transform 0.3s ease;
@@ -186,7 +180,6 @@
   transform: rotate(180deg);
 }
 
-/* Conteúdo expansível */
 .conteudoExpansivel {
   background: #ffffff;
   animation: expandir 0.3s ease-out;
@@ -214,7 +207,6 @@
   font-size: 15px;
 }
 
-/* Lista de áreas */
 .listaAreas {
   list-style: none;
   padding: 0;
@@ -238,7 +230,6 @@
   font-size: 16px;
 }
 
-/* Destaque dentro do conteúdo */
 .destaque {
   background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
   padding: 15px;
@@ -257,76 +248,76 @@
   text-align: center;
 }
 
-.secaoSobre {
-  scroll-margin-top: 80px;
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 768px) {
+.conteudo {
+display: flex; 
+flex-direction: column; 
+align-items: center; 
+gap: 40px;
 }
 
-@media (max-width: 768px) {
-  .conteudo {
-    grid-template-columns: 1fr;
-    gap: 40px;
-    text-align: center;
-  }
-  
-  .imagemSobre {
-    max-width: 350px;
-  }
-  
-  .texto p {
-    font-size: 14px;
-    text-align: left;
-  }
+.imagemContainer {
+display: none;
+}
 
-  .introducao {
-    padding: 20px;
-    margin-bottom: 25px;
-  }
+.textoContainer {
+text-align: center; /* Opcional: centraliza o texto dentro do container /
+max-width: 100%; / Garante que o texto ocupe a largura total */
+}
 
-  .nomeAdvogado {
-    font-size: 20px;
-  }
+.texto p {
+font-size: 14px;
+text-align: left; /* Mantém o alinhamento do texto individual à esquerda para melhor leitura */
+}
 
-  .oab {
-    font-size: 12px;
-  }
+.introducao {
+padding: 20px;
+margin-bottom: 25px;
+}
 
-  .missao {
-    font-size: 14px;
-  }
+.nomeAdvogado {
+font-size: 20px;
+}
 
-  .resumo {
-    padding: 15px;
-    gap: 12px;
-  }
+.oab {
+font-size: 12px;
+}
 
-  .icone {
-    font-size: 20px;
-    min-width: 24px;
-  }
+.missao {
+font-size: 14px;
+}
 
-  .tituloResumo {
-    font-size: 14px;
-  }
+.resumo {
+padding: 15px;
+gap: 12px;
+}
 
-  .descricaoResumo {
-    font-size: 12px;
-  }
+.icone {
+font-size: 20px;
+min-width: 24px;
+}
 
-  .conteudoDetalhes {
-    padding: 20px;
-  }
+.tituloResumo {
+font-size: 14px;
+}
 
-  .conteudoDetalhes p {
-    font-size: 14px;
-  }
+.conteudoDetalhes {
+padding: 20px;
+}
 
-  .listaAreas li {
-    font-size: 14px;
-    padding: 6px 0;
-  }
+.conteudoDetalhes p,
+.listaAreas li {
+font-size: 14px;
+}
 
-  .destaque {
-    padding: 12px;
-    font-size: 13px;
-  }
+.destaque {
+padding: 12px;
+font-size: 13px;
+}
+
+.botaoSobre {
+width: 80%; /* Opcional: para o botão não ficar muito largo centralizado /
+max-width: 300px; / Opcional: define uma largura máxima para o botão */
+}
 }

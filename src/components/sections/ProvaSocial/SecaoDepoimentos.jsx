@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import TituloSecao from '../../ui/TituloSecao';
 import styles from './SecaoDepoimentos.module.css';
 
 export default function SecaoDepoimentos() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [cardsVisiveis, setCardsVisiveis] = useState(3);
 
   const depoimentos = [
     {
@@ -38,8 +39,32 @@ export default function SecaoDepoimentos() {
     }
   ];
 
-  const cardsVisiveis = 3;
+  // Efeito para ajustar a quantidade de cards visíveis com base na largura da tela
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 1024) {
+        setCardsVisiveis(1);
+      } else {
+        setCardsVisiveis(3);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    handleResize(); // Executa ao montar o componente para definir o estado inicial
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+  
   const maxIndex = Math.max(0, depoimentos.length - cardsVisiveis);
+  const slidePercentage = 100 / cardsVisiveis;
+  const numIndicadores = cardsVisiveis === 1 ? depoimentos.length : maxIndex + 1;
+
+  // Garante que o índice atual não fique fora dos limites ao redimensionar
+  useEffect(() => {
+    if (currentIndex > maxIndex) {
+        setCurrentIndex(maxIndex);
+    }
+  }, [maxIndex, currentIndex]);
 
   const nextSlide = () => {
     setCurrentIndex((prev) => (prev < maxIndex ? prev + 1 : 0));
@@ -71,7 +96,7 @@ export default function SecaoDepoimentos() {
             <div
               className={styles.carrosselTrack}
               style={{
-                transform: `translateX(-${currentIndex * 100 / 3}%)`
+                transform: `translateX(-${currentIndex * slidePercentage}%)`
               }}
             >
               {depoimentos.map((depoimento, index) => (
@@ -98,14 +123,13 @@ export default function SecaoDepoimentos() {
           </button>
         </div>
 
-        {/* Indicadores */}
         <div className={styles.indicadores}>
-          {Array.from({ length: maxIndex + 1 }).map((_, index) => (
+          {Array.from({ length: numIndicadores }).map((_, index) => (
             <button
               key={`indicador-grupo-${index + 1}`}
               className={`${styles.indicador} ${index === currentIndex ? styles.ativo : ''}`}
               onClick={() => goToSlide(index)}
-              aria-label={`Ir para grupo ${index + 1}`}
+              aria-label={`Ir para depoimento ${index + 1}`}
             />
           ))}
         </div>

@@ -31,7 +31,7 @@ export default function SecaoHero() {
           </div>
           <div className={styles.imagemContainer}>
             <img
-              src="/images/hero/nicolas.svg"
+              src="/images/hero/nicolasADV.png"
               alt="Nicolas Ribeiro Neves - Advogado"
               className={styles.imagemAdvogado}
             />
