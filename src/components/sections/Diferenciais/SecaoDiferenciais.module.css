@@ -16,12 +16,12 @@
 }
 
 .diferencialCard {
-  background: #ffffff; /* Fundo branco para o card */
-  padding: 40px 30px;
+  background: #eaeaea;
   border-radius: 20px;
   text-align: center;
   /* Sombra única para o estado normal do card */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Sombra mais suave */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  /* Sombra mais suave */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   min-height: 280px;
   display: flex;
@@ -46,6 +46,7 @@
   align-items: center;
   justify-content: center;
   box-shadow: 0 4px 20px rgba(175, 148, 105, 0.3);
+  margin-top: 20px;
 }
 
 .icone {
@@ -82,22 +83,22 @@
     grid-template-columns: 1fr;
     gap: 30px;
   }
-  
+
   .diferencialCard {
     padding: 30px 20px;
     min-height: auto;
   }
-  
+
   .iconeContainer {
     width: 80px;
     height: 80px;
   }
-  
+
   .icone {
     width: 40px;
     height: 40px;
   }
-  
+
   .titulo {
     font-size: 18px;
   }

@@ -25,18 +25,16 @@ export default function Cabecalho() {
           />
         </div>
 
-          <nav className={`${styles.nav} ${menuAberto ? styles.navMobileAberto : ''}`}>
+        <nav className={`${styles.nav} ${menuAberto ? styles.navMobileAberto : ''}`}>
           <a href="#inicio" className={styles.navLink} onClick={fecharMenu}>Início</a>
-          <a href="#sobre" className={styles.navLink} onClick={fecharMenu}>Sobre mim</a>
           <a href="#servicos" className={styles.navLink} onClick={fecharMenu}>Serviços</a>
+          <a href="#sobre" className={styles.navLink} onClick={fecharMenu}>Sobre mim</a>
           <a href="#depoimentos" className={styles.navLink} onClick={fecharMenu}>Depoimentos</a>
           <a href="#faq" className={styles.navLink} onClick={fecharMenu}>FAQ</a>
-          
-          <div className={styles.botaoDesktop}>
-             <Botao href="https://wa.me/5538999719257" target="_blank">Fale comigo!</Botao>
-          </div>
 
-         
+          <div className={styles.botaoDesktop}>
+            <Botao href="https://wa.me/5538999719257" target="_blank">Fale comigo!</Botao>
+          </div>
         </nav>
 
         <button className={styles.menuButton} onClick={toggleMenu}>
