@@ -25,9 +25,9 @@ export default function SecaoContato() {
     e.preventDefault();
     setStatus("enviando"); 
 
-    const serviceID = "service_u3c9sqg"; 
-    const templateID = "template_n2veh2t";
-    const publicKey = "uMLVlXf3_32TNEWbI"; 
+    const serviceID = "service_lst8mle"; 
+    const templateID = "template_ppvhdhq";
+    const publicKey = "f1p35Hz1O__kSyRyw"; 
 
     const templateParams = {
         nome: formData.nome,
