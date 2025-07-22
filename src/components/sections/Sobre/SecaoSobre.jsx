@@ -89,6 +89,7 @@ export default function SecaoSobre() {
               className={styles.imagemSobre}
             />
           </div>
+          {/* </div> */}
 
           <div className={styles.textoContainer}>
             <div className={styles.texto}>
